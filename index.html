@@ -5,12 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/media.css">
         <link rel="shortcut icon" href="img/icone_titulo_site.ico">
         <title>Netflix Brasil - assistir a séries online, assistir a filmes online</title>
     </head>
     <body>
         <header class="cabecalho">
-            <img src="./img/logo_netflix.svg" alt="logotipo" draggable="false">
+            <img src="./img/logo_netflix.svg" alt="logotipo" id="logo" draggable="false">
             <div class="select_botao">
                 <span class="icone_planeta"><img src="./img/icone_planeta_branco.jpg" alt="icone" height="15" width="15"></span>
                 <select name="linguagem">
@@ -53,10 +54,6 @@
         </section>
         <section class="download section">
             <div class="grade_conteudo">
-                <div class="texto">
-                    <h1>Baixe séries para assistir offline.</h1>
-                    <h2>Salve seus títulos favoritos e sempre tenha algo para assistir.</h2>
-                </div>
                 <div class="imagem_video">
                     <div class="imagem">
                         <img src="./img/stranger_things.jpg" alt="imagem">
@@ -72,13 +69,17 @@
                         </div>
                     </div>
                 </div>
+                <div class="texto">
+                    <h1>Baixe séries para assistir offline.</h1>
+                    <h2>Salve seus títulos favoritos e sempre tenha algo para assistir.</h2>
+                </div>
             </div>
         </section>
         <section class="multitelas section">
             <div class="grade_conteudo">
                 <div class="texto">
                     <h1>Assista quando quiser.</h1>
-                    <h2>Assista no celular, tablet, Smart TV ou <br> notebook sem pagar a mais por isso.</h2>
+                    <h2>Assista no celular, tablet, Smart TV ou notebook sem pagar a mais por isso.</h2>
                 </div>
                 <div class="imagem_video">
                     <div class="imagem">
@@ -94,19 +95,19 @@
         </section>
         <section class="perfil_kids section">
             <div class="grade_conteudo">
+                <div class="imagem">
+                    <img src="./img/imagem_infantil.jpg" alt="imagem">
+                </div>
                 <div class="texto">
                     <h1>Crie perfis para crianças.</h1>
                     <h2>Deixe as crianças se aventurarem com seus personagens favoritos em um espaço feito só para elas, sem pagar a mais por isso.</h2>
-                </div>
-                <div class="imagem">
-                    <img src="./img/imagem_infantil.jpg" alt="imagem">
                 </div>
             </div>
         </section>
         <section class="perguntas section">
             <div class="grade_conteudo">
-                <h1>Perguntas frequentes</h1>
                 <div class="perguntas_respostas">
+                    <h1>Perguntas frequentes</h1>
                     <details>
                         <summary>O que é a Netflix?</summary>
                         <br>
@@ -171,48 +172,54 @@
                             conteúdo que as crianças podem ver e bloquear títulos 
                             específicos que você não quer que elas assistam.</p>
                     </details>
-                    <h3>Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
-                    <form method="post" class="formulario">
-                        <input type="text" placeholder="Email" />
-                        <button>Vamos lá</button>
-                        <span class="seta"><img src="./img/seta_email.svg" alt="icone"></span>
-                    </form>
                 </div>
+                <h3>Pronto para assistir? Informe seu email para criar ou reiniciar sua assinatura.</h3>
+                <form method="post" class="formulario">
+                    <input type="text" placeholder="Email" />
+                    <button>Vamos lá</button>
+                    <span class="seta"><img src="./img/seta_email.svg" alt="icone"></span>
+                </form>
             </div>
         </section>
-        <footer class="informacoes">
+        <footer class="section informacoes">
             <div class="grade_conteudo">
-                <div class="texto">
-                    <p>Dúvidas? Ligue
-                        <a href="#">0800-761-4631</a>
-                    </p>
-                    <ul>
-                        <li><a href="#">Perguntas frequentes</a></li>
-                        <li><a href="#">Centro de ajuda</a></li>
-                        <li><a href="#">Conta</a></li>
-                        <li><a href="#">Imprensa</a></li>
-                        <li><a href="#">Relações com investidores</a></li>
-                        <li><a href="#">Carreiras</a></li>
-                        <li><a href="#">Resgatar cartão pré-pago</a></li>
-                        <li><a href="#">Comprar cartão pré-pago</a></li>
-                        <li><a href="#">Formas de assistir</a></li>
-                        <li><a href="#">Termos de uso</a></li>
-                        <li><a href="#">Privacidade</a></li>
-                        <li><a href="#">Preferências de cookies</a></li>
-                        <li><a href="#">Informações corporativas</a></li>
-                        <li><a href="#">Entre em contato</a></li>
-                        <li><a href="#">Teste de velocidade</a></li>
-                        <li><a href="#">Avisos legais</a></li>
-                        <li><a href="#">Só na Netflix</a></li>
-                    </ul>
-                    <div class="select_rodape">
-                        <span class="icone_planeta"><img src="./img/icone_planeta_cinza.jpg" alt="icone" height="20" width="20"></span>
-                        <select name="linguagem">
-                            <option value="portugues">Português</option>
-                            <option value="ingles">English</option>
-                        </select>
-                    </div>
-                    <span class="texto_rodape">Netflix Brasil</span>
+                <p>Dúvidas? Ligue
+                    <a href="#">0800-761-4631</a>
+                </p>
+                <ul>
+                    <li><a href="#">Perguntas frequentes</a></li>
+                    <li><a href="#">Centro de ajuda</a></li>
+                    <li><a href="#">Conta</a></li>
+                    <li><a href="#">Imprensa</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Relações com investidores</a></li>
+                    <li><a href="#">Carreiras</a></li>
+                    <li><a href="#">Resgatar cartão pré-pago</a></li>
+                    <li><a href="#">Comprar cartão pré-pago</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Formas de assistir</a></li>
+                    <li><a href="#">Termos de uso</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                    <li><a href="#">Preferências de cookies</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Informações corporativas</a></li>
+                    <li><a href="#">Entre em contato</a></li>
+                    <li><a href="#">Teste de velocidade</a></li>
+                    <li><a href="#">Avisos legais</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Só na Netflix</a></li>
+                </ul>
+                <div class="select_rodape">
+                    <span class="icone_planeta"><img src="./img/icone_planeta_cinza.jpg" alt="icone" height="20" width="20"></span>
+                    <select name="linguagem">
+                        <option value="portugues">Português</option>
+                        <option value="ingles">English</option>
+                    </select>
+                    <p>Netflix Brasil</p>
                 </div>
             </div>
         </footer>

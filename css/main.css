@@ -5,15 +5,36 @@
 body{
     font-family: sans-serif;
     color: white;
+    
 }
 .cabecalho{
     position: absolute;
     top: 28px;
-    left: 56px;
-    width: 100%;
+    left: 3%;
+    width: 90%;
     max-width: 1790px;
-    justify-content: space-between;
     z-index: 1;
+}
+#logo{
+    width: 10%;
+    min-width: 100px;
+    margin-left: 3%;
+}
+.select_botao{
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+select{
+    position: relative;
+    padding: 7px 1px 7px 17px;
+    background: rgba(0,0,0,.4);
+    border: 1px solid #aaa;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    margin-right: 27px;
 }
 .icone_planeta{
     position: absolute;
@@ -21,21 +42,7 @@ body{
     top: 9px;
     z-index: 1;    
 }
-select{
-    position: absolute;
-    top:0;
-    right: 110px;
-    padding: 7px 1px 7px 17px;
-    background: rgba(0,0,0,.4);
-    border: 1px solid #aaa;
-    font-family: sans-serif;
-    font-size: 16px;
-    color: #fff;
-}
 .botao_entrar{
-    position:absolute;
-    top: 0;
-    right: 0;
     padding: 8px 18px;
     background-color: #e50914;
     border-radius: 3px;
@@ -48,6 +55,7 @@ select{
     cursor: pointer;
 }
 .main{
+    width: 100%;
     position: relative;
     height: 785px;
     background-image: url("../img/fundo_netflix.jpg");
@@ -59,6 +67,7 @@ select{
 .main h1{
     font-size: 64px;
     max-width: 800px;
+    width: 90%;
 }
 .main h2{
     display: block;
@@ -68,27 +77,32 @@ select{
     max-width: 800px;
     margin: 16px auto;
 }
-.main h3{
+h3{
     margin-top: 20px;
     display: block;
     font-size: 19.2px;
     font-family: sans-serif;
     font-weight: 400;
-    max-width: none;
+    max-width: 800px;
     padding-bottom: 20px;
 }
 .formulario{
-    display: grid;
-    grid-template-columns: 500px 210px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    text-align: center;
+    width: 90%;
 }
 .formulario input{
-    padding: 27px 10px;
+    width: 70%;
+    padding: 25px 10px;
     font-size: 16px;
     font-family: sans-serif;
     border-radius: 2px;
     border: solid 1px #8c8c8c;
 }
 .formulario button{
+    width: 30%;
     font-size: 30px;
     cursor: pointer;
     font-weight: 400;
@@ -104,8 +118,8 @@ select{
 }
 .main .seta{
     position:absolute;
-    top: 520px;
-    right: 615px;
+    top:35%;
+    left:96%;
 }
 .conteudo_principal{
     z-index: 1;
@@ -122,21 +136,24 @@ select{
     left: 0;
 }
 .section{
+    max-width: none;
     background: black;
     padding: 70px 45px;
     border-top: 8px solid #222;
 }
-.grade_conteudo{
-    max-width: 1100px;
+.grade_conteudo{    
+    width: 60%;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 .texto{
-    width: 52%;
+    max-width: 50%;
+    min-width: 40%;
     height: 100%;
-    padding: 0 48px 0 0;
+    padding:0 48px 0 0;
 }
 .texto h1{
     font-size: 50px;
@@ -149,6 +166,7 @@ select{
 .imagem_video{
     width: 48%;
     height: 100%;
+    max-height: 340px;
 }
 .imagem{
     margin: -5% -5% -5% 0;
@@ -164,20 +182,14 @@ select{
     height: 100%;
     max-width: 73%;
     max-height: 54%;
+    max-width: 400px;
     position: absolute;
-    top: 80px;
-    left: 70px;
+    left: 13%;
+    top: 20.2%;
 }
 .video video{
     max-width: 100%;
     max-height: 100%;
-}
-.download .texto{
-    order: 2;
-    padding: 0 0 0 3rem;
-}
-.download .imagem_video{
-    order: 1;
 }
 .download .imagem{
     margin: -8% 0 -4% -15%;
@@ -188,15 +200,15 @@ select{
 .caixa_download{
     padding: 8px 12px;
     position: absolute;
-    left: 80px;
-    bottom: 27px;
+    left: 16%;
+    top: 64%;
     background: #000;
     display: flex;
     align-items: center;
     width: 60%;
     border: 2px solid rgba(255,255,255,.25);
     border-radius: 12px;
-    z-index: 10000;
+    z-index: 1000;
 }
 .fundo_strangerthings{
     margin: 0 16px 0 0;
@@ -215,7 +227,11 @@ select{
     color: #0071eb;
 }
 .multitelas .texto{
-    width: 55%;
+    max-width: 100%;
+    width: 50%;
+}
+.multitelas .texto h1{
+    width: 105%;
 }
 .multitelas .imagem{
     margin: -5% -10% 0 0;
@@ -237,11 +253,9 @@ select{
     transform: translate(-50%,-50%);
 }
 .perfil_kids .texto{
-    order: 2;
     padding: 0 0 0 48px;
 }
 .perfil_kids .imagem{
-    order: 1;
     width: 45%;
     height: 100%;
 }
@@ -254,29 +268,28 @@ select{
 .perguntas{
     font-size: 26px;
     font-weight: 400;
-    font-family: sans-serif;
-    position: relative;
 }
-.perguntas h1{
+.perguntas .grade_conteudo{  
+    display: flex;
+    flex-direction: column;
+}
+.perguntas_respostas h1{
+    text-align: center;
+    margin-bottom: 40px;
     font-size: 50px;
-    position: absolute;
-    top: 68px;
-    left: 700px;
 }
 .perguntas_respostas{
-    margin-top:103px ;
-    margin-left: 142px;
     cursor: pointer;
+    width: 75%;
+    min-width: 50%;
+    margin-bottom: 30px;
 }
 .perguntas_respostas details{
-    text-align: left;
     background: #303030;
-    padding: 12.8px 35.2px 12.8px 19.2px;
+    padding: 23px 26px 23px 28px;
     margin-bottom: 10px;
     font-weight: 400;
-    position: relative;
-    width: 100%;
-    width: 750px;
+    width: 93%;  
 }
 summary::-webkit-details-marker{
     display: none;
@@ -292,66 +305,57 @@ summary::-webkit-details-marker{
 details[open] summary::after{
     transform: rotate(45deg);
 }
-.perguntas h3{
-    font-size: 19.2px;
-    font-family: sans-serif;
-    font-weight: 400;
-    max-width: none;
-    padding-bottom: 20px;
-    padding-top: 56px;
-    text-align: center;
-}
-.perguntas form{
-    margin-left: 53px;
+.perguntas .formulario{
     position: relative;
+    width: 65%;
+}
+.perguntas input{
+    padding: 20px 10px;
 }
 .perguntas .seta{
-    position: absolute;
-    top: 25px;
-    left: 680px;
-    z-index: 1000;
+    position:absolute;
+    top:30%;
+    left:96%;
 }
 .informacoes{
-    background: black;
-    padding: 0px 45px;
     border-top: 8px solid #222;
     color: #757575;
-    font-family: sans-serif;
-}
-.informacoes .grade_conteudo{
-    margin-left: 457px;
-    margin-top: 60px;
+    position: relative;
 }
 .informacoes p{
-    font-size: 16px;
-    margin-left: 10px;
-    margin-bottom: 20px;
+   margin: 0 auto;
+   width: 87%;
+   font-size: 16px;
+   margin-bottom: 30px;
+}
+.informacoes .grade_conteudo{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
 }
 .informacoes a{
     text-decoration: none;
     color: #757575;
-    position: relative;
 }
 .informacoes a:hover{
     text-decoration: underline;
 }
 ul{
-    font-size: 13px;
-    display:inline-block;
-    height: 216px;
-    width: 1000px;
-    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 88%;
+    min-width: 50%;
 }
 ul li{
-    display: inline-block;
-    width:20%;
-    text-decoration: none;
-    padding: 10px;
+    padding: 7px;
+    list-style: none;
+    width: 100%;
 }
 .select_rodape{
+    margin-top: 40px;
+    width: 87%;
     position: relative;
-    right: 298px;
-    bottom: 120px;
 }
 .select_rodape select{
     padding-left: 57px;
@@ -360,15 +364,15 @@ ul li{
     color: #999;
     background-color:black;
     border: 1px solid #333;
+    position: relative;
 }
 .select_rodape .icone_planeta{
     position: absolute;
     top: 15px;
-    right: 230px;
+    left: 20px;
 }
-.texto_rodape{
+.select_rodape p{
+    width: 100%;
     font-size: 13px;
-    position: relative;
-    left: 10px;
-    bottom: 50px;
+    margin-top: 25px;
 }
